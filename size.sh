@@ -16,4 +16,4 @@ if [ "$usage" -gt 0 ]; then
 echo "$user `expr $usage / 1024 / 1024`Mb ($status account)" >> $output
 fi
 done
-(echo "Subject: Mailbox Usages for $domain";cat $output) | /opt/zimbra/common/sbin/sendmail @SendTo
+(echo "Subject: Mailbox Usages for $domain";cat $output) | /opt/zimbra/common/sbin/sendmail $SendTo
